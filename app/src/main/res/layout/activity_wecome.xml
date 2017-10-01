@@ -80,7 +80,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/buttonBackground"
+        android:background="@drawable/button_border"
         android:fontFamily="@font/montserrat"
         android:text="@string/get_started"
         android:textColor="@color/textColor"
