@@ -10,53 +10,53 @@
         android:id="@+id/backgroundImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/content_des_background"
         android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/desiredleaguebg"
-        android:contentDescription="@string/content_des_background" />
+        app:srcCompat="@drawable/desiredleaguebg" />
 
     <ImageView
         android:id="@+id/swooshLogo"
         android:layout_width="88dp"
         android:layout_height="29dp"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/content_des_swoosh_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/swooshlogo"
-        android:contentDescription="@string/content_des_swoosh_logo"/>
+        app:srcCompat="@drawable/swooshlogo" />
 
     <TextView
         android:id="@+id/leagueText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat"
         android:text="@string/desired"
         android:textColor="@color/textColor"
-        android:fontFamily="@font/montserrat"
         android:textSize="18sp"
-        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/swooshLogo"/>
+        app:layout_constraintTop_toBottomOf="@id/swooshLogo" />
 
     <LinearLayout
         android:id="@+id/buttonHolderLinear"
-        android:orientation="vertical"
-        android:layout_marginTop="32dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/leagueText"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/leagueText">
 
         <ToggleButton
             android:id="@+id/mensButton"
@@ -68,9 +68,9 @@
             android:background="@drawable/swoosh_button_states"
             android:fontFamily="@font/montserrat"
             android:text="@string/mens"
-            android:textOn="@string/mens"
-            android:textOff="@string/mens"
             android:textColor="@color/textColor"
+            android:textOff="@string/mens"
+            android:textOn="@string/mens"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/leagueText" />
@@ -85,9 +85,9 @@
             android:background="@drawable/swoosh_button_states"
             android:fontFamily="@font/montserrat"
             android:text="@string/womens"
-            android:textOn="@string/womens"
-            android:textOff="@string/womens"
             android:textColor="@color/textColor"
+            android:textOff="@string/womens"
+            android:textOn="@string/womens"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/mensButton" />
@@ -102,9 +102,9 @@
             android:background="@drawable/swoosh_button_states"
             android:fontFamily="@font/montserrat"
             android:text="@string/co_ed"
-            android:textOn="@string/co_ed"
-            android:textOff="@string/co_ed"
             android:textColor="@color/textColor"
+            android:textOff="@string/co_ed"
+            android:textOn="@string/co_ed"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/womensButton" />
@@ -115,15 +115,15 @@
         android:id="@+id/nextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/button_border"
         android:fontFamily="@font/montserrat"
         android:text="@string/co_ed"
         android:textColor="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

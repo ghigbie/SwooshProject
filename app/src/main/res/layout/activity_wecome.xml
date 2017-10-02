@@ -10,6 +10,7 @@
         android:id="@+id/backgroundImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/content_des_background"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,19 +18,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/welcomescreenbg"
-        android:contentDescription="@string/content_des_background" />
+        app:srcCompat="@drawable/welcomescreenbg" />
 
     <ImageView
         android:id="@+id/swooshLogo"
         android:layout_width="88dp"
         android:layout_height="29dp"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/content_des_swoosh_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/swooshlogo"
-        android:contentDescription="@string/content_des_swoosh_logo"/>
+        app:srcCompat="@drawable/swooshlogo" />
 
     <TextView
         android:id="@+id/bigText"
