@@ -5,4 +5,5 @@
     <color name="colorAccent">#FFF</color>
     <color name="textColor">#FFF</color>
     <color name="buttonBackground">#64000000</color>
+    <color name="buttonCheckedBackground">#592C3F</color>
 </resources>
