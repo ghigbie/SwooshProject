@@ -9,4 +9,6 @@
     <string name="womens">Womens</string>
     <string name="co_ed">Co-ed</string>
     <string name="next">next</string>
+    <string name="content_des_background">Background Image</string>
+    <string name="content_des_swoosh_logo">Swoosh Logo</string>
 </resources>
