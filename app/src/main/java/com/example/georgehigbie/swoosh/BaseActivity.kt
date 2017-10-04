@@ -28,6 +28,11 @@ class BaseActivity : AppCompatActivity() {
         super.onResume()
     }
 
+    override fun onRestart() {
+        Log.d(TAG, "${javaClass.simpleName} On Restart")
+        super.onRestart()
+    }
+
     override fun onStop(){
         Log.d(TAG, "${javaClass.simpleName} onStop")
         super.onStop()
