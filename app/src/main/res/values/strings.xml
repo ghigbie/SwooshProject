@@ -12,4 +12,6 @@
     <string name="content_des_background">Background Image</string>
     <string name="content_des_swoosh_logo">Swoosh Logo</string>
     <string name="iam">I am a:</string>
+    <string name="beginner">Beginner</string>
+    <string name="baller">Baller</string>
 </resources>
