@@ -10,17 +10,16 @@
         android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="0dp"
-        android:layout_marginStart="0dp"
         android:layout_marginBottom="0dp"
         android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/beginnerballerbg"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/beginnerballerbg" />
 
     <ImageView
         android:id="@+id/swooshLogo"
@@ -50,32 +49,31 @@
         android:id="@+id/buttonLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintTop_toBottomOf="@id/iAm"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/iAm">
 
         <ToggleButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/swoosh_button_states"
-            android:textOn="@string/beginner"
-            android:textOff="@string/baller"
-            android:layout_weight="1"
             android:layout_marginEnd="2dp"
-            />
+            android:layout_weight="1"
+            android:background="@drawable/swoosh_button_states"
+            android:textOff="@string/baller"
+            android:textOn="@string/beginner" />
 
         <ToggleButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/swoosh_button_states"
+            android:layout_marginStart="2dp"
             android:layout_weight="1"
-            android:textOn="@string/beginner"
+            android:background="@drawable/swoosh_button_states"
             android:textOff="@string/baller"
-            android:layout_marginStart="2dp"/>
+            android:textOn="@string/beginner" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
