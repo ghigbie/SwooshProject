@@ -116,7 +116,7 @@
         android:layout_marginStart="16dp"
         android:background="@drawable/button_border"
         android:fontFamily="@font/montserrat"
-        android:text="@string/co_ed"
+        android:text="@string/next"
         android:textColor="@color/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
