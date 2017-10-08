@@ -47,7 +47,7 @@ class LeagueActivity : BaseActivity() {
                 val skillIntent = Intent(this, SkillActivity::class.java)
                 startActivity(skillIntent)
             }else{
-                var needSelectionMessage = "You need to select and league before clicking next."
+                var needSelectionMessage = "Please select a league"
                 Toast.makeText(this, needSelectionMessage, Toast.LENGTH_SHORT).show()
             }
         }

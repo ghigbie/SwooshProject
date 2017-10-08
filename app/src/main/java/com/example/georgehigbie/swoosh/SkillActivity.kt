@@ -3,6 +3,7 @@ package com.example.georgehigbie.swoosh
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_league.*
 import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity() {
@@ -28,6 +29,15 @@ class SkillActivity : BaseActivity() {
             beginnerButton.isChecked = false
             skillLevel = "baller"
             skillLevelToast(skillLevel)
+        }
+
+        nextButton.setOnClickListener {
+            if(skillLevel != ""){
+
+            }else{
+                var skillLevelMessage = "Please select a skill level."
+                Toast.makeText(this, skillLevelMessage, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
