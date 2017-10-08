@@ -13,7 +13,7 @@ class LeagueActivity : BaseActivity() {
         setContentView(R.layout.activity_league)
 
         var selectedLeague = ""
-        
+
         fun toastLeagueSelection(selectedLeague: String){
             var toastMessage = "You selected the ${selectedLeague} league!!!"
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
@@ -51,5 +51,6 @@ class LeagueActivity : BaseActivity() {
                 Toast.makeText(this, needSelectionMessage, Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 }

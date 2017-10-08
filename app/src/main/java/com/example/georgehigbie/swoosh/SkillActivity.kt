@@ -14,6 +14,8 @@ class SkillActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
         league = intent.getStringExtra(EXTRA_LEAGUE)
+        var message = league+league+league
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
         var skillLevel = ""
 
@@ -34,7 +36,7 @@ class SkillActivity : BaseActivity() {
             skillLevelToast(skillLevel)
         }
 
-        nextButton.setOnClickListener {
+        finishButton.setOnClickListener {
             if(skillLevel != ""){
 
             }else{
