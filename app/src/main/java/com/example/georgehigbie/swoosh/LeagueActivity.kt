@@ -43,8 +43,10 @@ class LeagueActivity : BaseActivity() {
 
 
         nextButton.setOnClickListener {
-            val skillIntent = Intent(this, SkillActivity::class.java)
-            startActivity(skillIntent)
+            if(selectedLeague != "") {
+                val skillIntent = Intent(this, SkillActivity::class.java)
+                startActivity(skillIntent)
+            }
         }
     }
 }
