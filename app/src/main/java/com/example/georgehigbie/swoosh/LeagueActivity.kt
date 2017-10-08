@@ -11,20 +11,24 @@ class LeagueActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
 
+        var selectedLeague = ""
 
         mensButton.setOnClickListener {
             womensButton.isChecked = false
             coedButton.isChecked = false
+            selectedLeague = "mens"
         }
 
         womensButton.setOnClickListener {
             mensButton.isChecked = false
             coedButton.isChecked = false
+            selectedLeague = "womens"
         }
 
         coedButton.setOnClickListener {
             mensButton.isChecked = false
             womensButton.isChecked = false
+            selectedLeague = "coed"
         }
 
         nextButton.setOnClickListener {
