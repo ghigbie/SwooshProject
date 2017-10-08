@@ -39,6 +39,7 @@ class SkillActivity : BaseActivity() {
         finishButton.setOnClickListener {
             if(skillLevel != ""){
                 var finishIntent = Intent(this, FinishActivity::class.java)
+                finishIntent.putExtra(EXTRA_LEAGUE, league)
                 finishIntent.putExtra(EXTRA_SKILL, skillLevel)
                 startActivity(finishIntent)
             }else{
