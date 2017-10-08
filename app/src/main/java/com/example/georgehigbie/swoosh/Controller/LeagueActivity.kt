@@ -23,21 +23,21 @@ class LeagueActivity : BaseActivity() {
         mensButton.setOnClickListener {
             womensButton.isChecked = false
             coedButton.isChecked = false
-            selectedLeague = "Mens"
+            selectedLeague = "mens"
             toastLeagueSelection(selectedLeague)
         }
 
         womensButton.setOnClickListener {
             mensButton.isChecked = false
             coedButton.isChecked = false
-            selectedLeague = "Womens"
+            selectedLeague = "womens"
             toastLeagueSelection(selectedLeague)
         }
 
         coedButton.setOnClickListener {
             mensButton.isChecked = false
             womensButton.isChecked = false
-            selectedLeague = "Coed"
+            selectedLeague = "co-ed"
             toastLeagueSelection(selectedLeague)
         }
 
