@@ -3,6 +3,7 @@ package com.example.georgehigbie.swoosh
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -13,23 +14,33 @@ class LeagueActivity : BaseActivity() {
 
         var selectedLeague = ""
 
+
+        fun toastLeagueSelection(selectedLeague: String){
+            var toastMessage = "You selected the ${selectedLeague} league!!!"
+            Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+        }
+
         mensButton.setOnClickListener {
             womensButton.isChecked = false
             coedButton.isChecked = false
-            selectedLeague = "mens"
+            selectedLeague = "Mens"
+            toastLeagueSelection(selectedLeague)
         }
 
         womensButton.setOnClickListener {
             mensButton.isChecked = false
             coedButton.isChecked = false
-            selectedLeague = "womens"
+            selectedLeague = "Womens"
+            toastLeagueSelection(selectedLeague)
         }
 
         coedButton.setOnClickListener {
             mensButton.isChecked = false
             womensButton.isChecked = false
-            selectedLeague = "coed"
+            selectedLeague = "Coed"
+            toastLeagueSelection(selectedLeague)
         }
+
 
         nextButton.setOnClickListener {
             val skillIntent = Intent(this, SkillActivity::class.java)
