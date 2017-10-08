@@ -1,4 +1,4 @@
-package com.example.georgehigbie.swoosh
+package com.example.georgehigbie.swoosh.Utilities
 
 /**
  * Created by georgehigbie on 10/7/17.
