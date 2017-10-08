@@ -13,8 +13,7 @@ class LeagueActivity : BaseActivity() {
         setContentView(R.layout.activity_league)
 
         var selectedLeague = ""
-
-
+        
         fun toastLeagueSelection(selectedLeague: String){
             var toastMessage = "You selected the ${selectedLeague} league!!!"
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
@@ -45,6 +44,7 @@ class LeagueActivity : BaseActivity() {
         nextButton.setOnClickListener {
             if(selectedLeague != "") {
                 val skillIntent = Intent(this, SkillActivity::class.java)
+                skillIntent.putExtra(EXTRA_LEAGUE, selectedLeague)
                 startActivity(skillIntent)
             }else{
                 var needSelectionMessage = "Please select a league"
