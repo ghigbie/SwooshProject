@@ -6,6 +6,7 @@ import android.widget.Toast
 import com.example.georgehigbie.swoosh.R
 import com.example.georgehigbie.swoosh.Utilities.EXTRA_LEAGUE
 import com.example.georgehigbie.swoosh.Utilities.EXTRA_SKILL
+import kotlinx.android.synthetic.main.activity_finish.*
 
 class FinishActivity : AppCompatActivity() {
 
@@ -18,5 +19,11 @@ class FinishActivity : AppCompatActivity() {
         league = intent.getStringExtra(EXTRA_LEAGUE)
         skillLevel = intent.getStringExtra(EXTRA_SKILL)
 
+        fun setLoadingText(league: String, skillLevel: String){
+            var displayText = "Currently searching for a ${skillLevel} ${league} leagues for you to enjoy!"
+            loadingText.setText(displayText)
+        }
+
+        setLoadingText(league, skillLevel)
     }
 }
