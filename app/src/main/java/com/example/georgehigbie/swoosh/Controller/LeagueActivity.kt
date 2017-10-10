@@ -4,8 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import com.example.georgehigbie.swoosh.Model.Player
-import com.example.georgehigbie.swoosh.Utilities.EXTRA_LEAGUE
 import com.example.georgehigbie.swoosh.R
+import com.example.georgehigbie.swoosh.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -46,7 +46,7 @@ class LeagueActivity : BaseActivity() {
         nextButton.setOnClickListener {
             if(player.leauge != "") {
                 val skillIntent = Intent(this, SkillActivity::class.java)
-                skillIntent.putExtra(EXTRA_LEAGUE, player.leauge)
+                skillIntent.putExtra(EXTRA_PLAYER, player.leauge)
                 startActivity(skillIntent)
             }else{
                 var needSelectionMessage = "Please select a league"
