@@ -24,29 +24,29 @@ class LeagueActivity : BaseActivity() {
         mensButton.setOnClickListener {
             womensButton.isChecked = false
             coedButton.isChecked = false
-            player.leauge = "mens"
-            toastLeagueSelection(player.leauge)
+            player.league = "mens"
+            toastLeagueSelection(player.league)
         }
 
         womensButton.setOnClickListener {
             mensButton.isChecked = false
             coedButton.isChecked = false
-            player.leauge = "womens"
-            toastLeagueSelection(player.leauge)
+            player.league = "womens"
+            toastLeagueSelection(player.league)
         }
 
         coedButton.setOnClickListener {
             mensButton.isChecked = false
             womensButton.isChecked = false
-            player.leauge = "co-ed"
-            toastLeagueSelection(player.leauge)
+            player.league = "co-ed"
+            toastLeagueSelection(player.league)
         }
 
 
         nextButton.setOnClickListener {
-            if(player.leauge != "") {
+            if(player.league != "") {
                 val skillIntent = Intent(this, SkillActivity::class.java)
-                skillIntent.putExtra(EXTRA_PLAYER, player.leauge)
+                skillIntent.putExtra(EXTRA_PLAYER, player.league)
                 startActivity(skillIntent)
             }else{
                 var needSelectionMessage = "Please select a league"
