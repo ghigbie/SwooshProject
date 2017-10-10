@@ -15,7 +15,7 @@ class FinishActivity : AppCompatActivity() {
         val player = intent.getParcelableExtra<Player>(EXTRA_PLAYER)
 
         fun setLoadingText(league: String, skillLevel: String){
-            var displayText = "Searching for a ${player.skill} ${player.league} league near you!"
+            var displayText = "Searching for a ${player.league} ${player.skill} league near you!"
             loadingText.setText(displayText)
         }
 
