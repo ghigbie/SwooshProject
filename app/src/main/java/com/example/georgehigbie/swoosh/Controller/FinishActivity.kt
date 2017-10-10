@@ -20,7 +20,7 @@ class FinishActivity : AppCompatActivity() {
         skillLevel = intent.getStringExtra(EXTRA_SKILL)
 
         fun setLoadingText(league: String, skillLevel: String){
-            var displayText = "Currently searching for a ${skillLevel} ${league} leagues for you to enjoy!"
+            var displayText = "Searching for a $skillLevel $league league near you!"
             loadingText.setText(displayText)
         }
 
