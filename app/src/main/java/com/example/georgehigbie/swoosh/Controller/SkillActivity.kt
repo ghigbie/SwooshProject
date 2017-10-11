@@ -2,7 +2,6 @@ package com.example.georgehigbie.swoosh.Controller
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.georgehigbie.swoosh.Model.Player
 import com.example.georgehigbie.swoosh.R
@@ -11,11 +10,18 @@ import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity() {
 
-    lateinit var player: Player
+    lateinit var player : Player
 
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
         outState?.putParcelable(EXTRA_PLAYER, player)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_skill)
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
+        setAllClickListeners()
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
@@ -23,15 +29,6 @@ class SkillActivity : BaseActivity() {
         if (savedInstanceState != null) {
             player = savedInstanceState.getParcelable(EXTRA_PLAYER)
         }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_skill)
-        player = intent.getParcelableExtra(EXTRA_PLAYER)
-        Log.d("PLAYER", player.league)
-
-        setAllClickListeners()
     }
 
     private fun skillLevelToast(skillLevel: String) {

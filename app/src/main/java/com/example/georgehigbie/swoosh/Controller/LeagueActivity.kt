@@ -3,6 +3,7 @@ package com.example.georgehigbie.swoosh.Controller
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.widget.Toast
 import com.example.georgehigbie.swoosh.Model.Player
 import com.example.georgehigbie.swoosh.R
@@ -32,12 +33,12 @@ class LeagueActivity : BaseActivity() {
         setAllClickListeners()
     }
 
-    fun toastLeagueSelection(selectedLeague: String) {
+    private fun toastLeagueSelection(selectedLeague: String) {
         var toastMessage = "You selected the ${selectedLeague} league!!!"
         Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
     }
 
-    fun setAllClickListeners(){
+    private fun setAllClickListeners(){
         mensButton.setOnClickListener {
             womensButton.isChecked = false
             coedButton.isChecked = false
@@ -63,7 +64,8 @@ class LeagueActivity : BaseActivity() {
         nextButton.setOnClickListener {
             if (player.league != "") {
                 val skillIntent = Intent(this, SkillActivity::class.java)
-                skillIntent.putExtra(EXTRA_PLAYER, player.league)
+                Log.d("PLAYER", player.league)
+                skillIntent.putExtra(EXTRA_PLAYER, player)
                 startActivity(skillIntent)
             } else {
                 var needSelectionMessage = "Please select a league"
