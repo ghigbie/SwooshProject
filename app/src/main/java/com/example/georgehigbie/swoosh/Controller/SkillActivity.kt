@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity() {
 
-    lateinit var player : Player
+    lateinit var player: Player
 
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
@@ -20,17 +20,27 @@ class SkillActivity : BaseActivity() {
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         super.onRestoreInstanceState(savedInstanceState)
-        if(savedInstanceState != null){
+        if (savedInstanceState != null) {
             player = savedInstanceState.getParcelable(EXTRA_PLAYER)
         }
     }
 
-    fun skillLevelToast(skillLevel: String) {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_skill)
+        Log.d("PLAYER", player.league)
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
+        Log.d("PLAYER", player.league)
+
+        setAllClickListeners()
+    }
+
+    private fun skillLevelToast(skillLevel: String) {
         var toastMessage = "You have the selected the ${skillLevel} skill level."
         Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
     }
 
-    fun setAllClickListeners(){
+    private fun setAllClickListeners() {
 
         beginnerButton.setOnClickListener {
             ballerButton.isChecked = false
@@ -56,14 +66,7 @@ class SkillActivity : BaseActivity() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_skill)
-        Log.d("PLAYER", player.league)
-        player = intent.getParcelableExtra(EXTRA_PLAYER)
-        Log.d("PLAYER", player.league)
+}
 
-        setAllClickListeners()
-        }
-    }
+
 

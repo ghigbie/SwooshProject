@@ -29,13 +29,15 @@ class LeagueActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
 
+        setAllClickListeners()
+    }
 
+    fun toastLeagueSelection(selectedLeague: String) {
+        var toastMessage = "You selected the ${selectedLeague} league!!!"
+        Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+    }
 
-        fun toastLeagueSelection(selectedLeague: String) {
-            var toastMessage = "You selected the ${selectedLeague} league!!!"
-            Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
-        }
-
+    fun setAllClickListeners(){
         mensButton.setOnClickListener {
             womensButton.isChecked = false
             coedButton.isChecked = false
