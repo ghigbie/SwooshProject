@@ -28,7 +28,6 @@ class SkillActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
-        Log.d("PLAYER", player.league)
         player = intent.getParcelableExtra(EXTRA_PLAYER)
         Log.d("PLAYER", player.league)
 
