@@ -13,12 +13,11 @@ class FinishActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finish)
         val player = intent.getParcelableExtra<Player>(EXTRA_PLAYER)
+        setLoadingText(player)
+    }
 
-        fun setLoadingText(league: String, skillLevel: String){
-            var displayText = "Searching for a ${player.league} ${player.skill} league near you!"
-            loadingText.setText(displayText)
-        }
-
-        setLoadingText(player.league, player.skill)
+    fun setLoadingText(player: Player){
+        var displayText = "Searching for a ${player.league} ${player.skill} league near you!"
+        loadingText.setText(displayText)
     }
 }
